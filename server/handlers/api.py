@@ -48,7 +48,7 @@ class ContextMenu(base.BaseHandler):
             for item in result:
                 commands.append(item.get(2).value)
 
-        logger.debug(f'Result: {cmds}')
+        logger.debug(f'Result: {commands}')
         self.set_header("Content-Type", "application/json")
         self.finish(json.dumps(commands))
 
